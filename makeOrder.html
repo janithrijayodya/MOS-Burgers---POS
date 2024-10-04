@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="makeOrder">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-12">
+                <div class="column">
+                    <h1 id="">Make Orders</h1>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-12">
+                <div class="mos"><img id="iconImage" src="img/mos.png" alt=""></div>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-6 col-sm-6 col-12">
+                <div>
+                    <div class="card__img"><svg xmlns="http://www.w3.org/2000/svg" width="100%"><defs><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="0" y2="100%" gradientTransform="rotate(222,648,379)"><stop offset="1" stop-color="#ec7505"></stop></linearGradient><pattern patternUnits="userSpaceOnUse" id="b" width="300" height="250" x="0" y="0" viewBox="0 0 1080 900"><g fill-opacity="0.5"></g></pattern></defs><rect x="0" y="0" fill="url(#a)" width="100%" height="100%"></rect><rect x="0" y="0" fill="url(#b)" width="100%" height="100%"></rect></svg></div>
+                    <div class="imgOrder">
+                    <img src="img/placeOrder.png" alt="">
+                    </div>
+                    <div class="imgPrevOrders">
+                        <img src="img/prevorder.png" alt="" id="img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-12">
+               
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-12">
+                <div class="input-group-cashier">
+                    <input type="button" value="Place an Order" class="btnOrder" onclick="btnPlaceOrder()"> 
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-12">
+                <div class="input-group-cashier">
+                    <input type="button" value="Previouse Orders" class="btnPrevOrders"> 
+                </div> 
+            </div>
+        </div>     -->
+    
+    <div>
+    <section id="orderSection">
+        <div class="col-md-6 col-sm-6 col-12">
+        
+          <table id="bigTable">
+            <tr>
+                <td>
+                    <div class="tableWrapper">
+                    <table id="foodItems">
+                        <thead>
+                            <tr>
+                                <th>Item Code</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                </td>
+
+                <td>
+                    <div class="order">
+                        <h2 id="orderTitle" >Order Details</h2>
+                        <ul id="orderList">
+                            
+                        </ul>
+                        <p id="total">Total: <span id="totalPrice">0</span> LKR</p>
+                        <button id="placeOrder" onclick="proceed()">Place Order</button>
+                    </div>
+                </td>
+            </tr>
+          </table>
+
+        </div>
+    </section>
+    </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

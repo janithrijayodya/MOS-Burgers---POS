@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="makeOrder">
+    <div class="container">
+         <div class="col-md-6 col-sm-6 col-12">
+
+            <div class="container" id="cardContainer">
+                    <div class="card" id="cardItem">
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <div class="column">
+                                <h1 id="">Manage Items</h1>
+                            </div>
+                        </div>
+                         <br>
+                        <div class="card__wrapper">
+                           <table cellpadding ="15">
+                            <tr>
+                                <td>Item Code  :</td>
+                                <td><input type="text" id="txtCode" class="txtAdd"></td>
+                            </tr>
+                            <tr>
+                                <td>Item Name :</td>
+                                <td><input type="text" id="txtItemName" class="txtAdd"></td>
+                            </tr>
+                            <tr>
+                                <td>Price    :</td>
+                                <td><input type="text" id="txtPrice" class="txtAdd"></td>
+                            </tr>
+                            <tr>
+                                <td>Quantity :</td>
+                                <td><input type="text" id="txtQty" class="txtAdd"></td>
+                            </tr>
+                            <tr>
+                                <td>Discount     :</td>
+                                <td><input type="text" id="txtDis" class="txtAdd"></td>
+                            </tr>
+                          
+
+                            <tr>
+                                <td colspan="2">
+                                <input type="submit" value="Add" id="btnAdd" onclick="addItem()">
+                                <input type="submit" value="Search" id="btnAdd" onclick="searchItem()">
+                                <input type="submit" value="Update" id="btnAdd" onclick="updateItem()">
+                                <input type="submit" value="Remove" id="btnAdd" onclick="deleteItem()">
+                                </td>
+
+                                <td > </td>
+                                
+                            </tr>
+                           </table>
+                        </div>
+                    </div> 
+               
+                <div class="addImage">
+    
+                    <input type="submit" value="Load" id="btnAdd" onclick="loadItems()">
+
+                    <div class="tableWrapper">
+                    <table border="1" id="cahierViewtbl">
+                    <thead>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Discount</th>
+                        
+                    </thead>
+                    
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>            
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+    <script src="app.js"></script>
+    <script src="app2.js"></script>
+</body>
+</html>
