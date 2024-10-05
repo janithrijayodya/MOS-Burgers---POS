@@ -31,9 +31,26 @@ function signin(){
 // let btnAddCashier = document.getElementById("btnAddCashier");
 
 
+
 function addCashier(){
     window.location.href ="addCashier.html";
 }
+
+let currentIdNumber = 1; 
+
+function generateId() {    
+    let idNumber = currentIdNumber.toString().padStart(4, '0');
+    let generatedId = 'C' + idNumber; 
+    currentIdNumber++; 
+    return generatedId;
+}
+
+window.onload = function() {
+    let newId = generateId();  
+    document.getElementById('txtId').value = newId;  
+
+};
+
 
 let cashiers = [];
 
@@ -59,6 +76,10 @@ function addCash(){
     document.getElementById('txtId').value = '';
     document.getElementById('txtCon').value = '';
     document.getElementById('txtNic').value = '';
+
+    let newId = generateId();  
+    document.getElementById('txtId').value = newId;  
+
 }
 
 // ============================view cashiers===========================================
@@ -97,6 +118,27 @@ function viewCustomer(){
     window.location.href ="viewCustomerDetails.html";
 }
 
+function loadCusDetails(){
+
+    let customers = JSON.parse(localStorage.getItem('customers')) || [];
+
+
+    const customerManageTable = document.getElementById('cahierViewtbl').getElementsByTagName('tbody')[0];
+                
+    customerManageTable.innerHTML = '';
+
+    customers.forEach(item => {
+        let row = customerManageTable.insertRow();
+        row.innerHTML = `
+            <td>${item.id}</td>
+            <td>${item.name}</td>
+            <td>${item.address}</td>
+            <td>${item.nic} </td>
+            <td>${item.contact} </td>
+            
+        `;
+    });
+    }
 
 
 
@@ -168,6 +210,23 @@ foodItems.forEach(item => {
     `;
 });
 
+function go(){
+    
+    let customers = JSON.parse(localStorage.getItem('customers')) || [];
+    
+    const id = document.getElementById('txtCustomerId').value;
+
+    for(let i=0 ; i<customers.length ; i++){
+        if(id == customers[i].id || name == customers[i].name){
+            document.getElementById('txtCustomerId').value = '';
+            return console.log("valid customer");
+        }else{
+            alert("Invalid Customer");
+            document.getElementById('txtCustomerId').value = '';
+        }
+    }
+    
+}
 //==============================place order=========================
 
 function btnPlaceOrder(){
@@ -179,8 +238,12 @@ let order = [];
 let totalPrice = 0;
 
 function addToOrder(code) {
+    const id = document.getElementById('txtCustomerId').value;
+
     let selectedItem = foodItems.find(item => item.code === code);
     order.push(selectedItem);
+    order.push(id);
+    console.log(order);
     
     // Update Order List
     const orderList = document.getElementById('orderList');
@@ -207,9 +270,15 @@ function proceed(){
 
  //================================manage items==================================
 
-    function manageItems(){
-        window.location.href ="manageItems.html";
-    }
+
+    
+
+ function manageItems(){
+    window.location.href ="manageItems.html";
+}
+
+
+
 
  //================================manage items==================================
 

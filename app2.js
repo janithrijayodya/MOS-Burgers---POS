@@ -3,8 +3,6 @@
        
        //================================manage items==================================
 
-
-
 function loadItems(){
 
 const foodItemsManageTable = document.getElementById('cahierViewtbl').getElementsByTagName('tbody')[0];

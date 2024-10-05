@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="makeOrder">
     <div class="container">
         <div class="row">
@@ -49,50 +51,55 @@
                 </div> 
             </div>
         </div>     -->
-    
-    <div>
-    <section id="orderSection">
-        <div class="col-md-6 col-sm-6 col-12">
-        
-          <table id="bigTable">
-            <tr>
-                <td>
-                    <div class="tableWrapper">
-                    <table id="foodItems">
-                        <thead>
-                            <tr>
-                                <th>Item Code</th>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                        </tbody>
+
+        <div>
+            <section id="orderSection">
+                <div class="col-md-6 col-sm-6 col-12">
+
+                    <table id="bigTable">
+                        <tr>
+                            <td>
+                                <div class="tableWrapper">
+                                    <table id="foodItems">
+                                        <thead>
+                                            <tr>
+                                                <th>Item Code</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="order">
+                                    <input type="text" id="txtCustomerId" class="txtAdd" placeholder="Cus ID">
+                                    <input type="submit" value="Go" id="btnAdd" onclick="go()">
+
+                                    <br><br><br>
+                                    <h2 id="orderTitle">Order Details</h2>
+                                    <ul id="orderList">
+
+                                    </ul>
+                                    <p id="total">Total: <span id="totalPrice">0</span> LKR</p>
+                                    <button id="placeOrder" onclick="proceed()">Place Order</button>
+                                </div>
+                            </td>
+                        </tr>
                     </table>
+
                 </div>
-                </td>
-
-                <td>
-                    <div class="order">
-                        <h2 id="orderTitle" >Order Details</h2>
-                        <ul id="orderList">
-                            
-                        </ul>
-                        <p id="total">Total: <span id="totalPrice">0</span> LKR</p>
-                        <button id="placeOrder" onclick="proceed()">Place Order</button>
-                    </div>
-                </td>
-            </tr>
-          </table>
-
+            </section>
         </div>
-    </section>
-    </div>
     </div>
 
 
     <script src="app.js"></script>
 </body>
+
 </html>

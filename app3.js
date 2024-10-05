@@ -1,4 +1,7 @@
 
+
+
+
 const customers = [];
                   
               
@@ -32,7 +35,7 @@ const customers = [];
     
             function searchCus(){
     
-                // let ItemsArray = JSON.parse(localStorage.getItem('customers')) || [];
+                let customers = JSON.parse(localStorage.getItem('customers')) || [];
     
                 const id = document.getElementById('txtCusId').value;
                 const name = document.getElementById('txtCusName').value;
@@ -118,12 +121,12 @@ const customers = [];
 
             function loadCus(){
 
-                const customerManageTable = document.getElementById('cahierViewtbl').getElementsByTagName('tbody')[0];
+                const customerManageTable2 = document.getElementById('cahierViewtbl').getElementsByTagName('tbody')[0];
                 
-                customerManageTable.innerHTML = '';
+                customerManageTable2.innerHTML = '';
 
                 customers.forEach(item => {
-                    let row = customerManageTable.insertRow();
+                    let row = customerManageTable2.insertRow();
                     row.innerHTML = `
                         <td>${item.id}</td>
                         <td>${item.name}</td>
